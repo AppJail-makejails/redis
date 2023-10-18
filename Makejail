@@ -1,0 +1,12 @@
+INCLUDE options/options.makejail
+
+ARG redis_profiles=insecure
+
+PKG redis
+
+COPY usr
+
+SYSRC redis_enable=YES
+SYSRC "redis_profiles=${redis_profiles}"
+
+SERVICE redis start
