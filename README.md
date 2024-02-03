@@ -22,9 +22,7 @@ appjail makejail \
     -j redis \
     -f gh+AppJail-makejails/redis \
     -o virtualnet=":<random> default" \
-    -o nat \
-    -o start \
-    -o overwrite=force
+    -o nat
 ```
 
 ### Connecting via `redis-cli`
@@ -43,8 +41,6 @@ appjail makejail \
     -f gh+AppJail-makejails/redis \
     -o virtualnet=":<random> default" \
     -o nat \
-    -o start \
-    -o overwrite=force \
     -o copydir=/tmp/files \
     -o file=/usr/local/etc/redis-standard.conf -- \
         --redis_profiles "standard"
