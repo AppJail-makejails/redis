@@ -1,12 +1,5 @@
-INCLUDE options/options.makejail
+ARG redis_from=ghcr.io/appjail-makejails/redis
+ARG redis_tag=latest
 
-ARG redis_profiles=insecure
-
-PKG redis
-
-COPY usr
-
-SYSRC redis_enable=YES
-SYSRC "redis_profiles=${redis_profiles}"
-
-SERVICE redis start
+OPTION overwrite=force
+OPTION from=${redis_from}:${redis_tag}
