@@ -15,7 +15,7 @@ LABEL org.opencontainers.image.title="Redis" \
 RUN set -xe; \
     \
     pkg update; \
-    pkg install -U redis${REDISVER} FreeBSD-locales; \
+    pkg install -U redis${REDISVER}; \
     \
     if [ -z "${NO_PKGCLEAN}" ]; then \
         pkg clean -a; \
