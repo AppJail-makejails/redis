@@ -1,5 +1,6 @@
 ARG redis_from=ghcr.io/appjail-makejails/redis
 ARG redis_tag=latest
 
+OPTION container=boot
 OPTION overwrite=force
 OPTION from=${redis_from}:${redis_tag}
