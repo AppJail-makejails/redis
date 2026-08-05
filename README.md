@@ -156,11 +156,18 @@ build:
       cache_dirs: ["pkgcache0:/var/cache/pkg"]
     - tag: 15.1-86
       containerfile: Containerfile
+      args:
+        FREEBSD_RELEASE: "15.1"
+        REDISVER: "86"
+        NO_PKGCLEAN: "1"
+      cache_dirs: ["pkgcache0:/var/cache/pkg"]
+    - tag: 15.1-88
+      containerfile: Containerfile
       aliases: ["latest"]
       default: true
       args:
         FREEBSD_RELEASE: "15.1"
-        REDISVER: "86"
+        REDISVER: "88"
         NO_PKGCLEAN: "1"
       cache_dirs: ["pkgcache0:/var/cache/pkg"]
     - tag: 15.1-devel
